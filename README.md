@@ -27,7 +27,7 @@ match (output) plugin example
 
 <match loomsystems.**>
   @type loomsystems
-  host <your_loomsystems_platorm_address>
+  host <your-subdomain>.loomsystems.com
 </match>
 
 ```
