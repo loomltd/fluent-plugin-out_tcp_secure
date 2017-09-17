@@ -22,7 +22,7 @@ To match events and send them to loomsystems.com, simply add the following code 
 ```
 After a restart of Fluentd, all flunetd events will be sent to your loomsystems sub-domain.
 
-match (output) plugin with event tag example 
+Example of match (output) with event tag: 
 
 ```xml
 <source>
