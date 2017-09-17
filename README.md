@@ -17,7 +17,6 @@ To match events and send them to loomsystems.com, simply add the following code 
 match (output) plugin example
 
 ```xml
- 
 ####
 ## Output descriptions:
 ## the out_loomsystems output plugin enabling the transfer
