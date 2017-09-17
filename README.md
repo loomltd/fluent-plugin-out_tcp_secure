@@ -1,10 +1,7 @@
-# FluentD output plugin for loomsystems.com.
+# Fluentd output plugin for loomsystems.com.
 Link to the [loomsystems.com documentation](http://support.loomsystems.com/sources/connect-existing-log-management-tools/fluentd)
 
-
-It mainly contains a proper JSON formatter and a socket handler that
-streams logs directly to loomsystems.com - so no need to use a log shipper
-if you don't wan't to.
+Fluentd output plugin for loomsystems contains a proper JSON formatter and a socket handler that streams logs directly to your loomsystems sub-domain.
 
 ## Pre-requirements
 
@@ -15,9 +12,10 @@ To add the plugin to your fluentd agent, use the following command:
 ## Usage
 ### Configure the output plugin
 
-To match events and send them to loomsystems.com, simply add the following code to your configuration file.
+To match events and send them to loomsystems.com, simply add the following code to your fluentd configuration file.
 
-TCP example
+match (output) plugin example
+
 ```xml
  
 ####
@@ -35,16 +33,16 @@ TCP example
 
 ```
 
-After a restart of FluentD, any child events tagged with `loomsystems` are shipped to your plateform.
+After a restart of Fluentd, any child events tagged with loomsystems are shipped to your loomsystems sub-domain.
 
 ### fluent-plugin-loomsystems properties
 
 As fluent-plugin-loomsystems is an output_buffer, you can set all output_buffer properties like it's describe in the [fluentd documentation](http://docs.fluentd.org/articles/output-plugin-overview#buffered-output-parameters "documentation").
 
-Addisinal custom properties:
+Custom properties:
 
 |  Property   |  Description                                                                             | Default value |
 |-------------|------------------------------------------------------------------------------------------|---------------|
-| **host**| The matched events tagged with "loomsystems.**" will be sent to your host at loomsystems.com |   *requierd   |
-| **use_ssl** | If true, opens a secured TCP connection to loomsystems.com, and non secured otherwise.   |      true     |
+| **host**| The matched events tagged with "loomsystems.**" will be sent to your loomsystems sub-domain  |   *requierd   |
+| **use_ssl** | If true, opens a secured TCP connection to loomsystems.com, and a non secured otherwise  |      true     |
 |**max_retries**| The number of retries before the output plugin stops. Set to -1 for unlimited retries  |       -1      |
