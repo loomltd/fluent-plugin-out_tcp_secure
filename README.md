@@ -1,4 +1,4 @@
-# Fluentd output plugin for loomsystems.com.
+# FluentD output plugin for loomsystems.com.
 Link to the [loomsystems.com documentation](http://support.loomsystems.com/sources/connect-existing-log-management-tools/fluentd)
 
 
