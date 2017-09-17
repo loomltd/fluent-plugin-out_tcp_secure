@@ -14,24 +14,28 @@ To add the plugin to your fluentd agent, use the following command:
 
 To match events and send them to loomsystems.com, simply add the following code to your fluentd configuration file.
 
-match (output) plugin example
+```xml
+<match **>
+  @type loomsystems
+  host <your-subdomain>.loomsystems.com
+</match>
+After a restart of Fluentd, all flunetd events will be sent to your loomsystems sub-domain.
+```
+match (output) plugin with event tag example 
 
 ```xml
-####
-## Output descriptions:
-## the out_loomsystems output plugin enabling the transfer
-## of fluentd events trough a secured ssl tcp connection.
-## Configuration: match events tagged with "loomsystems.**" and
-## send them to loomsystems.com
-##
+<source>
+  @type dummy
+  dummy {"hello":"loomsystems"}        
+  tag loomsystems 
+</source>  
 
 <match loomsystems.**>
   @type loomsystems
   host <your-subdomain>.loomsystems.com
 </match>
-
+After a restart of Fluentd, any child events tagged with loomsystems are shipped to your loomsystems sub-domain.
 ```
-
 After a restart of Fluentd, any child events tagged with loomsystems are shipped to your loomsystems sub-domain.
 
 ### fluent-plugin-loomsystems properties
