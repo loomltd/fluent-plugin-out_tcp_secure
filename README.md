@@ -19,8 +19,9 @@ To match events and send them to loomsystems.com, simply add the following code 
   @type loomsystems
   host <your-subdomain>.loomsystems.com
 </match>
-After a restart of Fluentd, all flunetd events will be sent to your loomsystems sub-domain.
 ```
+After a restart of Fluentd, all flunetd events will be sent to your loomsystems sub-domain.
+
 match (output) plugin with event tag example 
 
 ```xml
@@ -34,7 +35,6 @@ match (output) plugin with event tag example
   @type loomsystems
   host <your-subdomain>.loomsystems.com
 </match>
-After a restart of Fluentd, any child events tagged with loomsystems are shipped to your loomsystems sub-domain.
 ```
 After a restart of Fluentd, any child events tagged with loomsystems are shipped to your loomsystems sub-domain.
 
