@@ -52,7 +52,7 @@ Custom properties:
 
 
 ### On the receiving Logstash side
-***Do not use fluent codec! there is no need for that.
+***Do not use fluent codec! there is no need for that.***
 
 Example of Logstash tcp input properties:
 
@@ -73,4 +73,4 @@ input {
     }
 }
 ```
-### Feel free to use, change, fix, and ask question. Good Luck!
+### We are big funs of open source projects :) So please feel free to use, change, fix, and ask question. Good Luck from Loom Systems!
