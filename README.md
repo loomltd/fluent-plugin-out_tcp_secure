@@ -49,3 +49,27 @@ Custom properties:
 | **host**| The matched events tagged with "loomsystems.**" will be sent to your loomsystems sub-domain  |   *requierd   |
 | **use_ssl** | If true, opens a secured TCP connection to loomsystems.com, and a non secured otherwise  |      true     |
 |**max_retries**| The number of retries before the output plugin stops. Set to -1 for unlimited retries  |       -1      |
+
+
+**On the receiving Logstash side** Do not use fluent codec! there is no need for that.
+
+Example of Logstash tcp input properties:
+
+```xml
+input {
+    tcp {
+
+        port => 9999
+
+        ssl_enable => true
+
+        ssl_cert => "creds/cert.pem"
+
+        ssl_key => "creds/cert.key"
+
+        ssl_verify => false
+
+    }
+}
+```
+***Feel free to use, change, fix, and ask question. Good Luck!***
