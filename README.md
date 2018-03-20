@@ -51,7 +51,8 @@ Custom properties:
 |**max_retries**| The number of retries before the output plugin stops. Set to -1 for unlimited retries  |       -1      |
 
 
-**On the receiving Logstash side** Do not use fluent codec! there is no need for that.
+### On the receiving Logstash side
+***Do not use fluent codec! there is no need for that.
 
 Example of Logstash tcp input properties:
 
@@ -72,4 +73,4 @@ input {
     }
 }
 ```
-***Feel free to use, change, fix, and ask question. Good Luck!***
+### Feel free to use, change, fix, and ask question. Good Luck!
