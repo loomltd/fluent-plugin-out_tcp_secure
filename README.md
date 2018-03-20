@@ -59,15 +59,10 @@ Example of Logstash tcp input properties:
 ```xml
 input {
     tcp {
-
         port => 9999
-
         ssl_enable => true
-
         ssl_cert => "creds/cert.pem"
-
         ssl_key => "creds/cert.key"
-
         ssl_verify => false
     }
 }
