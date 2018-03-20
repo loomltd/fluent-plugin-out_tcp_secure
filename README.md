@@ -69,8 +69,8 @@ input {
         ssl_key => "creds/cert.key"
 
         ssl_verify => false
-
     }
 }
 ```
-### We are big funs of open source projects :) So please feel free to use, change, fix, and ask question. Good Luck from Loom Systems!
+### We are big funs of open source projects :) 
+### So please feel free to use, change, fix, and ask question. Good Luck from Loom Systems!
