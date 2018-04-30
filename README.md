@@ -1,6 +1,8 @@
 # Fluentd output plugin for loomsystems.com.
 Link to the [loomsystems.com documentation](http://support.loomsystems.com/sources/connect-existing-log-management-tools/fluentd)
 
+Link to the [stackoverflow.co thread](https://stackoverflow.com/questions/46248762/fluentd-ssl-tls-secured-tcp-output-plugin-to-generic-receiver-logstash)
+
 Fluentd output plugin for loomsystems contains a proper JSON formatter and a socket handler that streams logs directly to your loomsystems sub-domain.
 
 ## Pre-requirements
