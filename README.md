@@ -50,8 +50,8 @@ Custom properties:
 |-------------|------------------------------------------------------------------------------------------|---------------|
 | **host**| The matched events tagged with "loomsystems.**" will be sent to your loomsystems sub-domain  |   *requierd   |
 | **use_ssl** | If true, opens a secured TCP connection to loomsystems.com, and a non secured otherwise  |      true     |
-| **ssl_port** | If use_ssl is true, use the property ssl_port for configuring the sending port          |      9999     |
-| **port** | If use_ssl is false, use the property port for configuring the sending port                 |      8888     |
+| **ssl_port** | If use_ssl is true, use this property for configuring the sending port                  |      9999     |
+| **port** | If use_ssl is false, use this property for configuring the sending port                     |      8888     |
 |**max_retries**| The number of retries before the output plugin stops. Set to -1 for unlimited retries  |       -1      |
 
 
