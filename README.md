@@ -1,11 +1,11 @@
 # Fluentd output plugin for loomsystems.com.
-Link to the [loomsystems.com documentation](http://support.loomsystems.com/sources/connect-existing-log-management-tools/fluentd)
+Link to the [Loom Systems documentation](http://support.loomsystems.com/sources/connect-existing-log-management-tools/fluentd)
 
-Link to the [stackoverflow.co thread](https://stackoverflow.com/questions/46248762/fluentd-ssl-tls-secured-tcp-output-plugin-to-generic-receiver-logstash)
+Link to a [StackOverflow question](https://stackoverflow.com/questions/46248762/fluentd-ssl-tls-secured-tcp-output-plugin-to-generic-receiver-logstash) that drove the creation of this plugin.
 
 Fluentd output plugin for loomsystems contains a proper JSON formatter and a socket handler that streams logs directly to your loomsystems sub-domain.
 
-## Pre-requirements
+## Requirements
 
 To add the plugin to your fluentd agent, use the following command:
 
@@ -14,31 +14,30 @@ To add the plugin to your fluentd agent, use the following command:
 ## Usage
 ### Configure the output plugin
 
-To match events and send them to loomsystems.com, simply add the following code to your fluentd configuration file.
-
+To match *all* events and send them using this output plugin, add the following block to your fluentd configuration file:
 ```xml
 <match **>
   @type loomsystems
   host <your-subdomain>.loomsystems.com
 </match>
 ```
-After a restart of Fluentd, all flunetd events will be sent to your loomsystems sub-domain.
+Restart Fluentd to have the changes take effect.
 
 Example of match (output) with event tag: 
 
 ```xml
 <source>
   @type dummy
-  dummy {"hello":"loomsystems"}        
-  tag loomsystems 
+  dummy {"hello":"loom"}        
+  tag loom 
 </source>  
 
-<match loomsystems.**>
-  @type loomsystems
+<match loom.**>
+  @type loom
   host <your-subdomain>.loomsystems.com
 </match>
 ```
-After a restart of Fluentd, any child events tagged with loomsystems are shipped to your loomsystems sub-domain.
+Restart Fluentd to have events tagged with `loom` shipped to your loomsystems data-domain.
 
 ### fluent-plugin-loomsystems properties
 
