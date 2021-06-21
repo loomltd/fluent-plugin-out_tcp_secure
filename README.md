@@ -1,9 +1,13 @@
-# Fluentd output plugin for loomsystems.com.
-Link to the [Loom Systems documentation](http://support.loomsystems.com/sources/connect-existing-log-management-tools/fluentd)
+# Fluentd SSL/TLS secured TCP output plugin to generic receiver (ex: Logstash)
+This plugin was initily developed as part of the loomsystems product for the use of our customers.
+**There is no specific code for the loomsystem product and you can use it for any purpose**
+
+
+Link to the [documentation](http://support.loomsystems.com/sources/connect-existing-log-management-tools/fluentd)
 
 Link to a [StackOverflow question](https://stackoverflow.com/questions/46248762/fluentd-ssl-tls-secured-tcp-output-plugin-to-generic-receiver-logstash) that drove the creation of this plugin.
 
-Fluentd output plugin for loomsystems contains a proper JSON formatter and a socket handler that streams logs directly to your loomsystems sub-domain.
+Fluentd output plugin for tcp secure contains a proper JSON formatter and a socket handler that streams logs directly to your chosen host.
 
 ## Requirements
 
@@ -18,7 +22,7 @@ To match *all* events and send them using this output plugin, add the following 
 ```xml
 <match **>
   @type loomsystems
-  host <your-subdomain>.loomsystems.com
+  host <your-host>
 </match>
 ```
 Restart Fluentd to have the changes take effect.
@@ -37,11 +41,11 @@ Example of match (output) with event tag:
   host <your-subdomain>.loomsystems.com
 </match>
 ```
-Restart Fluentd to have events tagged with `loom` shipped to your loomsystems data-domain.
+Restart Fluentd to have events tagged with `loom` shipped to your domain.
 
 ### fluent-plugin-loomsystems properties
 
-As fluent-plugin-loomsystems is an output_buffer, you can set all output_buffer properties like it's describe in the [fluentd documentation](http://docs.fluentd.org/articles/output-plugin-overview#buffered-output-parameters "documentation").
+As fluent-plugin-loomsystems is an output_buffer, you can set all output_buffer properties like it's describe in the [fluentd documentation](https://docs.fluentd.org/configuration/buffer-section "documentation").
 
 Custom properties:
 
@@ -71,4 +75,4 @@ input {
 }
 ```
 ### We are big funs of open source projects :) 
-### So please feel free to use, change, fix, and ask question. Good Luck from Loom Systems!
+### So please feel free to use, change, fix, and ask questions. Good Luck!
