@@ -1,5 +1,5 @@
 # Fluentd SSL/TLS secured TCP output plugin to generic receiver (ex: Logstash)
-This plugin was initily developed as part of the loomsystems product for the use of our customers.
+This plugin was initily developed as part of the loomsystems product for the use of our customers.   
 **There is no specific code for the loomsystem product and you can use it for any purpose**
 
 Link to a [StackOverflow question with examples](https://stackoverflow.com/questions/46248762/fluentd-ssl-tls-secured-tcp-output-plugin-to-generic-receiver-logstash) that drove the creation of this plugin.
